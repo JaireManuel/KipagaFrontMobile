@@ -1,0 +1,10 @@
+.header{
+    background-image: url("../imgs/banner.png");
+    height: 400px;
+    border-bottom-left-radius:50px ;
+    border-bottom-right-radius:50px ;
+    background-size: cover;
+ }
+.toolbar{
+    background-color: rgba(255, 255, 255, 0.774);
+ }

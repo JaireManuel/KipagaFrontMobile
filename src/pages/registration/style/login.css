@@ -1,0 +1,87 @@
+
+#imglogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 250px; 
+}
+.form-control{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    width:90%;
+    height: auto;
+    padding: 5px; 
+    position: relative;
+    margin-top: 170px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(104, 104, 104, 0.331);
+    color: rgb(91, 91, 91);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+input{ 
+    width:100%;
+    padding:10px;
+    outline:none;
+    color: #000000; 
+     border: none;
+    border-radius:10px;
+    background-color: rgb(234, 234, 234);
+
+}
+ 
+/*FORMATAÇÃO ERIVALDO*/
+
+h2.txt-down-logo{
+    color: #aba9a9;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+
+div.data-form{
+    width: 100%; 
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+div.data-form h3{
+    text-align: center;
+}
+
+div.data-form button.btn-entrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;  
+    padding: 10px;
+    background-color: rgb(135, 0, 198);
+    font-weight: bold;
+    font-size: large;
+    color: #ffffff;
+    text-align: center;
+    text-transform:unset;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.esqueceu{ 
+    color: #00a7cd;
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1px; 
+    text-decoration: none;
+}

@@ -1,0 +1,8 @@
+{
+  "name": "kipaga",
+  "integrations": {
+    "capacitor": {}
+  },
+  
+  "type": "react"
+}
