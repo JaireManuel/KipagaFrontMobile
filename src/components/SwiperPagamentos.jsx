@@ -27,8 +27,9 @@ const SwiperPagamentos = () => {
   >
     <SwiperSlide> <IonCard>
       <IonCardHeader>
-        <IonCardTitle>Card Title</IonCardTitle>
-        <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+      <h4>ENDE</h4>
+
+      <h5>Energia</h5>
       </IonCardHeader>
 
       <IonCardContent>
@@ -36,8 +37,9 @@ const SwiperPagamentos = () => {
     </IonCard></SwiperSlide>
     <SwiperSlide> <IonCard>
       <IonCardHeader>
-        <IonCardTitle>Card Title</IonCardTitle>
-        <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+      <h4>Shoprite</h4>
+
+      <h5>Mercado</h5>
       </IonCardHeader>
 
       <IonCardContent>
@@ -45,8 +47,9 @@ const SwiperPagamentos = () => {
     </IonCard></SwiperSlide>
     <SwiperSlide> <IonCard>
       <IonCardHeader>
-        <IonCardTitle>Card Title</IonCardTitle>
-        <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+      <h4>Cinavazuka</h4>
+
+      <h5>Design</h5>
       </IonCardHeader>
 
       <IonCardContent>
@@ -54,8 +57,8 @@ const SwiperPagamentos = () => {
     </IonCard></SwiperSlide>
     <SwiperSlide> <IonCard>
       <IonCardHeader>
-        <IonCardTitle>Card Title</IonCardTitle>
-        <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+        <h4>ErySolution</h4>
+        <h5>Computação</h5>
       </IonCardHeader>
 
       <IonCardContent>
