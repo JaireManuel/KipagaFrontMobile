@@ -17,6 +17,7 @@ const id_user = localStorage.getItem('id')
 const [ VerUser, SetVerUser] =  useState({});
 
 const [sender, setSender] = useState({});
+const [enviar, setenviar] = useState(false);
 const [Receiver, setReceiver] = useState({});
 const [ReceiverID, setReceiverID] = useState({});
 const [Valor, setValor] = useState({});
@@ -48,6 +49,7 @@ const realizarTransferencias = async (e) => {
   e.preventDefault();
   await transferenciaService.userByIdKipaga(ReceiverID)
    .then((response) => {
+    setenviar(true)
     // console.log(response.data.User)
     setReceiver(response.data.User)
  
@@ -81,7 +83,7 @@ const realizarTransferencias = async (e) => {
         text: "O Seu saldo e insuficiente para completar",
         icon: "warning",
         button: false,
-  
+
         timer: 1500
       });
   
@@ -207,7 +209,8 @@ onSubmit={(e) => realizarTransferencias(e)}
                 </IonItem>
             </IonCardHeader>
         </IonCard>
-        <IonButton type="submit" expand="block">Concluir Operação</IonButton>
+        {enviar ?         <IonButton type="submit" expand="block">Transação concluida!</IonButton>
+ :         <IonButton type="submit" expand="block">Realizar transação</IonButton>}
         <IonCard color='light'>
         <IonCardHeader>
           <IonLabel></IonLabel>
