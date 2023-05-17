@@ -15,16 +15,10 @@ const Cartao: React.FC = () => {
 <IonButton href='/Inicio'><IonIcon icon={returnUpBack}></IonIcon></IonButton>
 <IonTitle>Cartão Kipaga </IonTitle>
       <IonCard color='light'>
-        <IonCardHeader>
-            <IonCardSubtitle>Frente</IonCardSubtitle>
-        </IonCardHeader>
        <IonImg src={Card1} style={{ width:'100%', height:'80%' }}></IonImg>
       </IonCard>    
 
       <IonCard color='light'>
-      <IonCardHeader>
-            <IonCardSubtitle>Trás</IonCardSubtitle>
-        </IonCardHeader>
        <IonImg src={Card2} style={{ width:'100%', height:'80%' }}></IonImg>
       </IonCard> 
       <IonCard color='light'>
