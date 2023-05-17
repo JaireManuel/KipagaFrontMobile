@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useRef,  useEffect, useState } from 'react';
 import { IonButton, IonCol, IonContent, IonFooter, IonGrid, IonHeader, IonImg, IonLabel, IonRow, IonTitle, IonToolbar, useIonToast } from '@ionic/react';
 import { IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonIcon } from '@ionic/react';
 import { arrowUp, backspace, card, cash, cashOutline, qrCode, returnDownBack, returnUpBack } from 'ionicons/icons';
@@ -20,6 +20,19 @@ import { Link, Route } from 'react-router-dom';
 
 const Enviar: React.FC = () => {
 
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  const startCamera = async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+      if (videoRef.current) {
+        videoRef.current.srcObject = stream;
+      }
+    } catch (error) {
+      console.log('Erro ao acessar a câmera:', error);
+    }
+  };
+
   const [present] = useIonToast();
 
   const presentToast = (position: 'top' | 'middle' | 'bottom') => {
@@ -39,6 +52,8 @@ const Enviar: React.FC = () => {
 
 </Link>
 <IonImg src={Pague} style={{ width:'100%'}}></IonImg>
+{/* <button onClick={startCamera}>Abrir Câmera</button>
+      <video ref={videoRef} autoPlay></video> */}
 <Link to="Pagamentos">
 <IonButton expand="block" >
            <IonTitle>Pagamentos</IonTitle>

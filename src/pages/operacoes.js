@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useRef,  useEffect, useState } from 'react';
 import { IonButton, IonContent, IonFooter, IonHeader, IonLabel, IonTitle, IonToolbar, useIonToast } from '@ionic/react';
 import { IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonIcon } from '@ionic/react';
 import { cashOutline } from 'ionicons/icons';
@@ -6,10 +6,20 @@ import Nav from '../components/nav';
 import depositosService from '../services/depositosService';
 import dayjs from 'dayjs';
 
+
 const Operacoes = () => {
 
 
+  const videoRef = useRef(null);
 
+  const startCamera = async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+      videoRef.current.srcObject = stream;
+    } catch (error) {
+      console.log('Erro ao acessar a câmera:', error);
+    }
+  };
 
 const [ VerDepositos, SetVerDepositos] =  useState([]);
     useEffect(() => {

@@ -45,17 +45,21 @@ const Receber: React.FC = () => {
 <IonContent fullscreen={false}>
 <IonButton href='/Inicio'><IonIcon icon={returnUpBack}></IonIcon></IonButton>
 <IonTitle>Receber </IonTitle>
-      <IonCard color='light'>
+      <IonCard color='primary'>
         <IonCardHeader>
            <IonTitle>Ler o QR Code</IonTitle>
        </IonCardHeader>
        <IonImg src={`http://192.168.100.5:8000/static/images/${VerUser.bi}.png`} style={{ width:'100%', height:'80%' }}></IonImg>
       </IonCard>    
-      <IonCard color='light'>
-        <IonCardHeader>
-           <IonTitle>ID Kipaga : {VerUser.idKipaga}</IonTitle>
-       </IonCardHeader>
+      <IonCard color='primary'>
+     
+
+         <IonCardHeader style={{ textAlign:"center"}}>
+         <IonCardTitle>{VerUser.idKipaga}</IonCardTitle>
+         </IonCardHeader>
+
       </IonCard> 
+      
       </IonContent>
  
     {/* <IonButton expand="block" onClick={() => presentToast('top')}>Fazer Transferência</IonButton> */}
