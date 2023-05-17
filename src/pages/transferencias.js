@@ -11,6 +11,7 @@ import {QRScanner} from '@ionic-native/qr-scanner';
 import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
 import { Link } from 'react-router-dom';
 
+const numeral = require('numeral');
 const Transferencia = () => {
 
 const id_user = localStorage.getItem('id')
@@ -22,6 +23,15 @@ const [Receiver, setReceiver] = useState({});
 const [ReceiverID, setReceiverID] = useState({});
 const [Valor, setValor] = useState({});
 const [iserror, setiserror] = useState("")
+
+
+
+const price = VerUser.saldo; // Preço
+
+// Formata o preço
+const formattedPrice = numeral(price).format('0,0.00');
+
+
 useEffect(() => {
   UserByID()
   setSender(id_user)
@@ -163,10 +173,9 @@ onSubmit={(e) => realizarTransferencias(e)}
 <IonCard color='primary'>
         <IonCardHeader>
           <IonLabel>Saldo Disponivel</IonLabel> 
-          <IonCardTitle>  {VerUser.saldo} AOA </IonCardTitle>
+          <IonCardTitle>  {formattedPrice} AO</IonCardTitle>
       </IonCardHeader>
       </IonCard>
-        <IonTitle>Montante</IonTitle>
         <IonCard>
         {/* <IonLabel style={{ margin:'15px' }}>Insere o valor a ser tranferido</IonLabel> */}
             <IonCardHeader>     
@@ -174,8 +183,6 @@ onSubmit={(e) => realizarTransferencias(e)}
                     <IonLabel position="stacked">Digite o valor </IonLabel>
                     
                      <input 
-                                  className='form-control'
-
                  type="number"
                    placeholder="00 000 000" 
                  name="username" 
@@ -187,10 +194,9 @@ onSubmit={(e) => realizarTransferencias(e)}
             {/* <IonButton expand="block">Seguinte</IonButton> */}
         </IonCard>
 
-     <IonTitle>Beneficiario</IonTitle>
+
      <IonCard>
         <IonLabel style={{ margin:'15px' }}>ID / QR Code</IonLabel>
-        <IonLabel style={{ margin:'15px' }}>{iserror}</IonLabel>
             <IonCardHeader>     
                 <IonItem>
                 <IonButton   style={{ width:'80px', height:'70px', marginLeft:'35%' }}>
@@ -198,8 +204,6 @@ onSubmit={(e) => realizarTransferencias(e)}
                 </IonButton>
                     <IonLabel position="stacked">Inserir ID </IonLabel>
                     <input 
-                                  className='form-control'
-
                  type="text"
                    placeholder="Ki012131" 
                  name="username" 
@@ -210,7 +214,7 @@ onSubmit={(e) => realizarTransferencias(e)}
             </IonCardHeader>
         </IonCard>
         {enviar ?         <IonButton type="submit" expand="block">Transação concluida!</IonButton>
- :         <IonButton type="submit" expand="block">Realizar transação</IonButton>}
+ :         <IonButton type="submit" expand="block">Efetuar transfêrencias</IonButton>}
         <IonCard color='light'>
         <IonCardHeader>
           <IonLabel></IonLabel>

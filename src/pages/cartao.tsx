@@ -3,7 +3,8 @@ import { IonButton, IonCol, IonContent, IonFooter, IonGrid, IonHeader, IonImg, I
 import { IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonIcon } from '@ionic/react';
 import { returnUpBack } from 'ionicons/icons';
 import Nav from '../components/nav';
-import Card from '../imgs/cardf.jpeg'
+import Card1 from '../imgs/1.png'
+import Card2 from '../imgs/2.png'
 
 const Cartao: React.FC = () => {
 
@@ -17,14 +18,14 @@ const Cartao: React.FC = () => {
         <IonCardHeader>
             <IonCardSubtitle>Frente</IonCardSubtitle>
         </IonCardHeader>
-       <IonImg src={Card} style={{ width:'100%', height:'80%' }}></IonImg>
+       <IonImg src={Card1} style={{ width:'100%', height:'80%' }}></IonImg>
       </IonCard>    
 
       <IonCard color='light'>
       <IonCardHeader>
             <IonCardSubtitle>Trás</IonCardSubtitle>
         </IonCardHeader>
-       <IonImg src={Card} style={{ width:'100%', height:'80%' }}></IonImg>
+       <IonImg src={Card2} style={{ width:'100%', height:'80%' }}></IonImg>
       </IonCard> 
       <IonCard color='light'>
         <IonCardHeader>

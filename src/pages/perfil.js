@@ -17,6 +17,7 @@ import {
   IonIcon,
   IonCardSubtitle,
   IonImg,
+  IonCardContent,
 } from '@ionic/react';
 import { OverlayEventDetail } from '@ionic/core/components';
 import Nav from '../components/nav';
@@ -25,6 +26,8 @@ import Pague from '../imgs/img.svg'
 import userService from '../services/userService';
 import Cookies from 'js-cookie';
 import { useHistory } from 'react-router';
+import { person } from 'ionicons/icons';
+import "../styles/main.css"
 
 function Perfil() {
   // const modal = useRef<HTMLIonModalElement>(null);
@@ -43,8 +46,7 @@ function Perfil() {
   //     setMessage(`Hello, ${ev.detail.data}!`);
   //   }
   // }
-  const history = useHistory();
-
+  const history = useHistory()
 
   const handlLogout = ()=>{
     localStorage.clear()
@@ -63,6 +65,7 @@ await  userService.getUserByID(id_user)
   .then((response) => {
   
     console.log(response.data.User)
+
     SetVerUser(response.data.User)
   })
   .catch((error) => {
@@ -74,49 +77,36 @@ await  userService.getUserByID(id_user)
 
   // setTimeout(AllDepsitos,1000)
 
-}  
+}
+const imageUrl = "192.168.100.5:8000"+VerUser.foto;
+
   return (
     <>
     <Nav/>
     <IonContent fullscreen={true}>
     <IonCard color='primary'>
  <br/>
- <IonTitle>Dados do Usuario</IonTitle>
+ <IonCard><div className='imgPerfil' style={{backgroundImage: `url("http://192.168.100.5:8000${VerUser.foto}")`}}>
+ </div>
 
-     <IonCard color='light'>
-         <IonCardHeader>
-         <IonCardSubtitle>Nome Completo : {VerUser.first_name} {VerUser.last_name}</IonCardSubtitle>
-         </IonCardHeader>
-     </IonCard>
+  </IonCard>
 
-     <IonCard color='light'>
-         <IonCardHeader>
-         <IonCardSubtitle>Data de Nascimento : {VerUser.data_nasc}</IonCardSubtitle>
-         </IonCardHeader>
-     </IonCard>
+ <IonCard>
+      <IonCardHeader>
+        <IonCardTitle>Perfil Kipaga</IonCardTitle>
+      </IonCardHeader>
 
+      <IonCardContent>
+        <IonIcon icon={person} size="large" />
+        <h2> {VerUser.first_name} {VerUser.last_name}</h2>
+        <p>{VerUser.email}</p>
+        <p>Telefone  {VerUser.Telefone}</p>
+      </IonCardContent>
+  </IonCard>
      <IonCard color='light'>
-         <IonCardHeader>
-         <IonCardSubtitle>Numero de Telefone : {VerUser.Telefone}</IonCardSubtitle>
+         <IonCardHeader style={{ textAlign:"center"}}>
+         <IonCardTitle>{VerUser.idKipaga}</IonCardTitle>
          </IonCardHeader>
-     </IonCard>
-
-     <IonCard color='light'>
-         <IonCardHeader>
-         <IonCardSubtitle>Email :{VerUser.email}</IonCardSubtitle>
-         </IonCardHeader>
-     </IonCard>
-
- <IonTitle>Dados da Conta</IonTitle>
-     <IonCard color='light'>
-         <IonCardHeader>
-         <IonCardSubtitle>ID da conta : {VerUser.first_name}</IonCardSubtitle>
-         </IonCardHeader>
-     </IonCard>
-     <IonCard color='light'>
-       <IonCardHeader>
-       <IonCardSubtitle>Card Kipaga : {VerUser.idKipaga}</IonCardSubtitle>
-       </IonCardHeader>
      </IonCard>
      </IonCard>
 

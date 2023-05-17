@@ -4,6 +4,7 @@ import { IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonIcon } from '
 import { cashOutline } from 'ionicons/icons';
 import Nav from '../components/nav';
 import depositosService from '../services/depositosService';
+import dayjs from 'dayjs';
 
 const Operacoes = () => {
 
@@ -32,7 +33,11 @@ const AllDepsitos = async () => {
   setTimeout(AllDepsitos,1000)
 
 }
-
+function newDate (date) {
+  const formattedDate = dayjs(date).format('DD/MM/YYYY');
+  console.log(formattedDate);
+  return formattedDate;
+}
 
 
   return (
@@ -46,7 +51,7 @@ const AllDepsitos = async () => {
         <IonCardHeader>
           <IonLabel>Recebido</IonLabel>
           <IonCardTitle> <IonIcon icon={cashOutline} /> {deposito.conteudo}</IonCardTitle>
-          <IonLabel>{deposito.timestamp}</IonLabel>
+          <IonLabel>{  newDate(deposito.timestamp) }</IonLabel>
       </IonCardHeader>
       </IonCard>
          ))

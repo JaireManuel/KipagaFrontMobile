@@ -49,7 +49,7 @@ const Receber: React.FC = () => {
         <IonCardHeader>
            <IonTitle>Ler o QR Code</IonTitle>
        </IonCardHeader>
-       <IonImg src={`http://localhost:8000/static/images/${VerUser.bi}.png`} style={{ width:'100%', height:'80%' }}></IonImg>
+       <IonImg src={`http://192.168.100.5:8000/static/images/${VerUser.bi}.png`} style={{ width:'100%', height:'80%' }}></IonImg>
       </IonCard>    
       <IonCard color='light'>
         <IonCardHeader>

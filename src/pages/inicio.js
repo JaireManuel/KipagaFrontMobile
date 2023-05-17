@@ -9,6 +9,7 @@ import { Link, Route } from 'react-router-dom';
 
 import userService from '../services/userService';
 import SwiperPagamentos from '../components/SwiperPagamentos';
+const numeral = require('numeral');
 
 
 
@@ -45,6 +46,10 @@ const UserByID = async () => {
 const saldo = (VerUser.saldo);
   const [present] = useIonToast();
 
+  const price = saldo; // Preço
+
+  // Formata o preço
+  const formattedPrice = numeral(price).format('0,0.00');
   return (
     <>
    <Nav/>
@@ -59,7 +64,7 @@ const saldo = (VerUser.saldo);
             <IonCard color='light'>
       <IonCardHeader>
           <IonLabel>Saldo Disponivel</IonLabel>
-          <IonCardTitle> <IonIcon icon={medal} />  {saldo} AOA</IonCardTitle>
+          <IonCardTitle> <IonIcon icon={medal} />  {formattedPrice} AOA</IonCardTitle>
       </IonCardHeader>
       </IonCard>
 

@@ -1,10 +1,30 @@
 .header{
     background-image: url("../imgs/banner.png");
     height: 400px;
+    width: 100%;
     border-bottom-left-radius:50px ;
     border-bottom-right-radius:50px ;
     background-size: cover;
  }
 .toolbar{
-    background-color: rgba(255, 255, 255, 0.774);
+    background-color: rgba(177, 172, 172, 0.774);
+ }
+ .imgPerfil{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-left: 20%;
+    background-size: cover;
+    transition: 2s;
+
+ }
+
+ .imgPerfil:hover{
+    width: 200px;
+    height: 200px;
+    border: 3px solid rgb(250, 171, 0) dashed;
+    border-radius: 50%;
+    margin-left: 20%;
+    background-size: cover;
+    transition: 2s;
  }
