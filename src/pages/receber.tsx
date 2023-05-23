@@ -51,7 +51,7 @@ const Receber: React.FC = () => {
         <IonCardHeader>
            <IonTitle>Ler o QR Code</IonTitle>
        </IonCardHeader>
-       <IonImg src={`http://192.168.43.150:8000/static/images/${VerUser.bi}.png`} style={{ width:'100%', height:'80%' }}></IonImg>
+       <IonImg src={`http://ganilson.pythonanywhere.com/static/images/${VerUser.bi}.png`} style={{ width:'100%', height:'80%' }}></IonImg>
       </IonCard>    
       <IonCard color='primary'>
      

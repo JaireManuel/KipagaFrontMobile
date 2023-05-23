@@ -78,7 +78,7 @@ await  userService.getUserByID(id_user)
   // setTimeout(AllDepsitos,1000)
 
 }
-const imageUrl = "192.168.43.150:8000"+VerUser.foto;
+const imageUrl = "ganilson.pythonanywhere.com"+VerUser.foto;
 
   return (
     <>
@@ -86,7 +86,7 @@ const imageUrl = "192.168.43.150:8000"+VerUser.foto;
     <IonContent fullscreen={true}>
     <IonCard color='primary'>
  <br/>
- <IonCard><div className='imgPerfil' style={{backgroundImage: `url("http://192.168.43.150:8000${VerUser.foto}")`}}>
+ <IonCard><div className='imgPerfil' style={{backgroundImage: `url("http://ganilson.pythonanywhere.com${VerUser.foto}")`}}>
  </div>
 
   </IonCard>
