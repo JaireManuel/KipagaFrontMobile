@@ -86,7 +86,7 @@ const imageUrl = "ganilson.pythonanywhere.com"+VerUser.foto;
     <IonContent fullscreen={true}>
     <IonCard color='primary'>
  <br/>
- <IonCard><div className='imgPerfil' style={{backgroundImage: `url("http://ganilson.pythonanywhere.com${VerUser.foto}")`}}>
+ <IonCard><div className='imgPerfil' style={{backgroundImage: `url("https://ganilson.pythonanywhere.com${VerUser.foto}")`}}>
  </div>
 
   </IonCard>
