@@ -67,7 +67,13 @@ function newDate (date) {
          ))
         }
      
-
+     <IonCard color='light'>
+        <IonCardHeader>
+          <IonLabel></IonLabel>
+          <IonCardTitle><br/></IonCardTitle>
+          <IonLabel><br/></IonLabel>
+      </IonCardHeader>
+      </IonCard>
     
       </IonContent>
       <IonFooter>

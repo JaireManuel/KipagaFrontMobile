@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { IonButton, IonCol, IonContent, IonFooter, IonGrid, IonHeader, IonImg, IonLabel, IonRow, IonTitle, IonToolbar, useIonToast } from '@ionic/react';
-import { IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonIcon } from '@ionic/react';
-import { arrowUp, card, cash, cashOutline, qrCode, returnUpBack } from 'ionicons/icons';
+import { IonButton,  IonContent, IonImg,  IonTitle,  useIonToast } from '@ionic/react';
+import { IonCard, IonCardHeader, IonCardTitle, IonIcon } from '@ionic/react';
+import { returnUpBack } from 'ionicons/icons';
 import Nav from '../components/nav';
-import Card from '../imgs/cardf.jpeg'
 import userService from '../services/userService';
+import { Link } from 'react-router-dom';
 
 const Receber: React.FC = () => {
 
@@ -43,13 +43,15 @@ const Receber: React.FC = () => {
   <>    
 <Nav/>
 <IonContent fullscreen={false}>
-<IonButton href='/Inicio'><IonIcon icon={returnUpBack}></IonIcon></IonButton>
+<Link to='/Inicio'>
+<IonButton><IonIcon icon={returnUpBack}></IonIcon></IonButton>
+</Link>
 <IonTitle>Receber </IonTitle>
       <IonCard color='primary'>
         <IonCardHeader>
            <IonTitle>Ler o QR Code</IonTitle>
        </IonCardHeader>
-       <IonImg src={`http://192.168.100.5:8000/static/images/${VerUser.bi}.png`} style={{ width:'100%', height:'80%' }}></IonImg>
+       <IonImg src={`http://192.168.43.150:8000/static/images/${VerUser.bi}.png`} style={{ width:'100%', height:'80%' }}></IonImg>
       </IonCard>    
       <IonCard color='primary'>
      

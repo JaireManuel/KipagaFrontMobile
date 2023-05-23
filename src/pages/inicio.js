@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { IonButton, IonCol, IonContent, IonGrid, IonImg, IonLabel, IonRow, useIonToast } from '@ionic/react';
 import { IonCard, IonCardHeader, IonCardTitle, IonIcon } from '@ionic/react';
-import { arrowUp, qrCode, card, medal } from 'ionicons/icons';
+import { arrowUp, qrCode, card, wallet } from 'ionicons/icons';
 import Nav from '../components/nav';
-import Banner from '../imgs/banner.png' 
-import axios from 'axios'
-import { Link, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import userService from '../services/userService';
 import SwiperPagamentos from '../components/SwiperPagamentos';
@@ -64,7 +62,7 @@ const saldo = (VerUser.saldo);
             <IonCard color='light'>
       <IonCardHeader>
           <IonLabel>Saldo Disponivel</IonLabel>
-          <IonCardTitle> <IonIcon icon={medal} />  {formattedPrice} AOA</IonCardTitle>
+          <IonCardTitle> <IonIcon icon={wallet} />  {formattedPrice} AOA</IonCardTitle>
       </IonCardHeader>
       </IonCard>
 
@@ -92,7 +90,7 @@ const saldo = (VerUser.saldo);
           </IonCol>
           <IonCol>
           <Link to="/cartao">
-          <IonButton href='/cartao' style={{ width:'80px', height:'70px' }}>
+          <IonButton style={{ width:'80px', height:'70px' }}>
               <IonIcon slot="icon-only" icon={card}></IonIcon>
           </IonButton>
 </Link>

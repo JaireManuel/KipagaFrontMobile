@@ -122,9 +122,9 @@ console.log(data)
    
           </Form>
 
-          <Link className="esqueceu" to="/">
-            {t("Criar conta?")}
-          </Link>
+          <a className="esqueceu" href="https://kipaga.netlify.app/">
+            {t("Saber mais sobre o Kipaga")}
+          </a>
 
           <Link className="esqueceu" to="/">
             {t("Esqueceu sua Senha?")}

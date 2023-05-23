@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { IonButton, IonCol, IonContent, IonFooter, IonGrid, IonHeader, IonImg, IonLabel, IonRow, IonTitle, IonToolbar, useIonToast } from '@ionic/react';
 import { IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonIcon } from '@ionic/react';
+import { Link } from 'react-router-dom';
 import { returnUpBack } from 'ionicons/icons';
 import Nav from '../components/nav';
 import Card1 from '../imgs/1.png'
@@ -12,7 +13,9 @@ const Cartao: React.FC = () => {
   <>    
 <Nav/>
 <IonContent fullscreen={false}>
-<IonButton href='/Inicio'><IonIcon icon={returnUpBack}></IonIcon></IonButton>
+<Link to='/Inicio'>
+    <IonButton ><IonIcon icon={returnUpBack}></IonIcon></IonButton>
+</Link>
 <IonTitle>Cartão Kipaga </IonTitle>
       <IonCard color='light'>
        <IonImg src={Card1} style={{ width:'100%', height:'80%' }}></IonImg>

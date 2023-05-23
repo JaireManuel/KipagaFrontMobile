@@ -78,7 +78,7 @@ await  userService.getUserByID(id_user)
   // setTimeout(AllDepsitos,1000)
 
 }
-const imageUrl = "192.168.100.5:8000"+VerUser.foto;
+const imageUrl = "192.168.43.150:8000"+VerUser.foto;
 
   return (
     <>
@@ -86,7 +86,7 @@ const imageUrl = "192.168.100.5:8000"+VerUser.foto;
     <IonContent fullscreen={true}>
     <IonCard color='primary'>
  <br/>
- <IonCard><div className='imgPerfil' style={{backgroundImage: `url("http://192.168.100.5:8000${VerUser.foto}")`}}>
+ <IonCard><div className='imgPerfil' style={{backgroundImage: `url("http://192.168.43.150:8000${VerUser.foto}")`}}>
  </div>
 
   </IonCard>
@@ -111,8 +111,20 @@ const imageUrl = "192.168.100.5:8000"+VerUser.foto;
      </IonCard>
 
  <IonButton expand="block" onClick={handlLogout} >Sair <IonIcon icon={logOut}></IonIcon></IonButton>
-
+ <IonCard color='light'>
+         <IonCardHeader>
+         <IonCardTitle></IonCardTitle>
+         </IonCardHeader>
+     </IonCard>
+ <IonCard color='light'>
+        <IonCardHeader>
+          <IonLabel></IonLabel>
+          <IonCardTitle><br/></IonCardTitle>
+          <IonLabel><br/></IonLabel>
+      </IonCardHeader>
+      </IonCard>
     </IonContent>
+ 
     </>
   );
 }

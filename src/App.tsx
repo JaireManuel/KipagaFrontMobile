@@ -1,23 +1,15 @@
-import { Redirect, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import {
-  IonApp,
-  IonCardTitle,
-  IonContent,
-  IonFooter,
-  IonHeader,
   IonIcon,
   IonLabel,
-  IonNav,
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
   IonTabs,
-  IonTitle,
-  IonToolbar,
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { addCircle, cardOutline, cashOutline, ellipse, homeOutline, personCircleOutline, square, trailSignOutline, triangle } from 'ionicons/icons';
+import { homeOutline, personCircleOutline,  trailSignOutline } from 'ionicons/icons';
 import Inicio from './pages/inicio';
 import './styles/main.css';
 
