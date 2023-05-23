@@ -7,9 +7,8 @@ import Transferer from '../imgs/tranfer.png'
 import userService from '../services/userService';
 import transferenciaService from '../services/transferenciaService';
 import swal from 'sweetalert';
-import {QRScanner} from '@ionic-native/qr-scanner';
-import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
-import { Link } from 'react-router-dom';
+// import {QRScanner} from '@ionic-native/qr-scanner';
+import { Link, Redirect } from 'react-router-dom';
 
 const numeral = require('numeral');
 const Transferencia = () => {
@@ -35,24 +34,24 @@ const formattedPrice = numeral(price).format('0,0.00');
 useEffect(() => {
   UserByID()
   setSender(id_user)
-  checkPermission()
+  // checkPermission()
 }, [])  
-   const checkPermission = async () => {
- try {
-     // check or request permission
-     const status = await BarcodeScanner.checkPermission({ force: true });
+//    const checkPermission = async () => {
+//  try {
+//      // check or request permission
+//      const status = await BarcodeScanner.checkPermission({ force: true });
   
-     if (status.granted) {
-       // the user granted permission
-       return true;
-     }
- }catch(error){
-  setiserror(error.message)
-  console.log(iserror)
- }
+//      if (status.granted) {
+//        // the user granted permission
+//        return true;
+//      }
+//  }catch(error){
+//   setiserror(error.message)
+//   console.log(iserror)
+//  }
   
-    return false;
-  };
+//     return false;
+//   };
  
 
 const realizarTransferencias = async (e) => {
@@ -154,6 +153,11 @@ const UserByID = async () => {
    setTimeout(UserByID,5000)
 
 }
+
+if (enviar) {
+  return <Redirect to="/inicio" />;
+}
+
   return (
     <>
    <Nav/>
@@ -213,7 +217,7 @@ onSubmit={(e) => realizarTransferencias(e)}
                 </IonItem>
             </IonCardHeader>
         </IonCard>
-        {enviar ?         <IonButton type="submit" expand="block">Transação concluida!</IonButton>
+        {enviar ?  <IonButton type="submit" expand="block">Transação concluida!</IonButton>
  :         <IonButton type="submit" expand="block">Efetuar transfêrencias</IonButton>}
         <IonCard color='light'>
         <IonCardHeader>
