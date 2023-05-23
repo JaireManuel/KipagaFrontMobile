@@ -70,7 +70,7 @@ const saldo = (VerUser.saldo);
     <IonGrid >
         <IonRow>
           <IonCol>
-          <Link to="/enviar">
+          <Link to="/Pagamentos">
 <IonButton style={{ width:'80px', height:'70px'}}>
               <IonIcon slot="icon-only" icon={arrowUp}></IonIcon>
          </IonButton>
